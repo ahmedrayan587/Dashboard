@@ -1,0 +1,54 @@
+extends index.pug
+block title
+    title.text-capitalize plans
+block pageContent 
+    h1.page-header.text-capitalize.col-12 plans
+    .sections-container.d-flex.col-12.justify-content-evenly
+        .section.col-lg-6.col-md-12.col-sm-12.d-flex.row.wrap
+            .free.plan.circle.d-flex.justify-content-center.align-items-center
+                .row.wrap 
+                    h2.text-capitalize.text-center free
+                    h2.text-capitalize.text-center $0.00
+            .activities.d-flex.col-12.row.wrap.justify-content-baseline
+                +plan-yes('Access All Text Lessons')
+                +plan-yes('Access All Videos Lessons')
+                +plan-yes('Appear On Leaderboard')
+                +plan-no('Browse Content Without Ads')
+                +plan-no('Access All Assignments')
+                +plan-no('Get Daily Prizes')
+                +plan-no('Earn Certificate')
+                +plan-no('1 GB Space For Hosting Files')
+                +plan-no('Access Badge System')
+            button.btn.free join
+        .section.col-lg-6.col-md-12.col-sm-12.d-flex.row.wrap
+            .basic.plan.circle.d-flex.justify-content-center.align-items-center
+                .row.wrap 
+                    h2.text-capitalize.text-center basic
+                    h2.text-capitalize.text-center $7.99
+            .activities.d-flex.col-12.row.wrap.justify-content-baseline
+                +plan-yes('Access All Text Lessons')
+                +plan-yes('Access All Videos Lessons')
+                +plan-yes('Appear On Leaderboard')
+                +plan-yes('Browse Content Without Ads')
+                +plan-yes('Access All Assignments')
+                +plan-yes('Get Daily Prizes')
+                +plan-yes('Earn Certificate')
+                +plan-no('1 GB Space For Hosting Files')
+                +plan-no('Access Badge System')
+            button.btn.basic join
+        .section.col-lg-6.col-md-12.col-sm-12.d-flex.row.wrap
+            .premium.plan.circle.d-flex.justify-content-center.align-items-center
+                .row.wrap 
+                    h2.text-capitalize.text-center premium
+                    h2.text-capitalize.text-center $19.99
+            .activities.d-flex.col-12.row.wrap.justify-content-baseline
+                +plan-yes('Access All Text Lessons')
+                +plan-yes('Access All Videos Lessons')
+                +plan-yes('Appear On Leaderboard')
+                +plan-yes('Browse Content Without Ads')
+                +plan-yes('Access All Assignments')
+                +plan-yes('Get Daily Prizes')
+                +plan-yes('Earn Certificate')
+                +plan-yes('1 GB Space For Hosting Files')
+                +plan-yes('Access Badge System')
+            button.btn.premium join

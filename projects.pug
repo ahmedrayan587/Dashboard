@@ -1,0 +1,20 @@
+extends index.pug
+block title
+    title.text-capitalize projects
+block pageContent 
+    h1.page-header.text-capitalize.col-12 projects
+    .sections-container.d-flex.col-12.justify-content-evenly
+        include includes/section
+            .col-12.d-flex.row.wrap.justify-content-between
+                .col-10
+                    +section('Elzero Dashboard','Elzero Dashboard Project Design And Programming And Hosting')
+                .col-2.d-flex.justify-content-end 15/10/2021
+                .col-12.projects-image
+                    img(src="image/team-01.png" alt="")
+                    img(src="image/team-02.png" alt="")
+                    img(src="image/team-03.png" alt="")
+                    img(src="image/team-04.png" alt="")
+                +skills-group('programming','design','hosting','marketing')
+                .col-6.line
+                .col-2 $ 2500
+

@@ -1,0 +1,66 @@
+extends index.pug
+block title
+    title.text-capitalize profile
+block pageContent 
+    h1.page-header.text-capitalize.col-12 profile
+    .sections-container.d-flex.col-12.justify-content-evenly
+        .section.col-12.row.wrap
+            .d-flex.row.wrap
+                .profile-main.col-lg-3.col-md-3.col-sm-12.d-flex.row.wrap.justify-content-center.align-items-center
+                    img(class = "col-8" src="image/avatar.png", alt="")
+                    h2.col-8.text-capitalize.text-center  Osama Elzero
+                    p.col-8.text-capitalize.text-center Level 20
+                    .level.page-header
+                    .stars.col-12.d-flex 
+                        i.fa-solid.fa-star.star
+                        i.fa-solid.fa-star.star
+                        i.fa-solid.fa-star.star
+                        i.fa-solid.fa-star.star
+                        i.fa-solid.fa-star.star
+                    p.col-8.text-capitalize.text-center 550 rating
+                .col-lg-9.col-md-9.col-sm-12.d-flex.row.wrap
+                    +profile('General Information','Full Name:','Osama Mohamed','gender:','male','country:','egypt')
+                    +profile-non-checked('Personal Information','email:','o@nn.sa','phone:','019123456789','Date Of Birth:','25/10/1982')
+                    +profile('Job Information','title:','Full Stack Developer','Programming Language:','Python','Years Of Experience:','15+')
+                    +profile-non-checked('Billing Information','Payment Method:','Paypal','Email:','email@website.com','Subscription:','monthly')
+        .section.col-lg-3.col-md-4.col-sm-5.d-flex.row.wrap
+            div 
+                +section('My Skills','Complete Skills List')
+            +skills-group('HTML','pugjs','HAML')
+            +skills-group('CSS','SASS','stylus')
+            +skills-group('javascript','typeScript','')
+            +skills-group('vuejs','reactjs','')
+            +skills-group('jest','jasmine','')
+            +skills-group('PHP','laravel','')
+            +skills-group('python','django','')
+        .section.col-lg-9.col-md-8.col-sm-7.d-flex.row.wrap
+            div 
+                +section('Latest Activities','Latest Activities Done By The User')
+            .activities.d-flex.col-12.row.wrap.justify-content-between
+                .d-flex.col-lg-8.col-md-8.col-sm-12.row.wrap.justify-content-center
+                    img(class="col-lg-6 col-md-6 col-sm-12" src="image/activity-01.png", alt="")
+                    .col-lg-6.col-md-6.col-sm-12
+                        +section('store','Bought The Mastering Python Course')
+                .col-lg-3.col-md-3.col-sm-12
+                    +section('18:10','yesterday')
+            .activities.d-flex.col-12.row.wrap.justify-content-between
+                .d-flex.col-lg-8.col-md-8.col-sm-12.row.wrap.justify-content-center
+                    img(class="col-lg-6 col-md-6 col-sm-12" src="image/activity-02.png", alt="")
+                    .col-lg-6.col-md-6.col-sm-12
+                        +section('Academy','Got The PHP Certificate')
+                .col-lg-3.col-md-3.col-sm-12
+                    +section('16:05','yesterday')
+            .activities.d-flex.col-12.row.wrap.justify-content-between
+                .d-flex.col-lg-8.col-md-8.col-sm-12.row.wrap.justify-content-center
+                    img(class="col-lg-6 col-md-6 col-sm-12" src="image/activity-03.png", alt="")
+                    .col-lg-6.col-md-6.col-sm-12
+                        +section('Badges','Unlocked The 10 Skills Badge')
+                .col-lg-3.col-md-3.col-sm-12
+                    +section('18:05','yesterday')
+            .activities.d-flex.col-12.row.wrap.justify-content-between
+                .d-flex.col-lg-8.col-md-8.col-sm-12.row.wrap.justify-content-center
+                    img(class="col-lg-6 col-md-6 col-sm-12" src="image/activity-01.png", alt="")
+                    .col-lg-6.col-md-6.col-sm-12
+                        +section('store','Bought The Typescript Course')
+                .col-lg-3.col-md-3.col-sm-12
+                    +section('12:05','yesterday')

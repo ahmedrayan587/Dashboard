@@ -1,0 +1,101 @@
+extends index.pug
+block title
+    title.text-capitalize settings
+block pageContent 
+    h1.page-header.text-capitalize.col-12 settings
+    .sections-container.d-flex.col-12.justify-content-evenly
+        include includes/section.pug
+            +section('Site Control','Control The Website If There Is Maintenance')
+            .col-12.row.nowrap.control.d-flex.justify-content-between
+                .col-8.phrase
+                    +section('Website Control','Open/Close Website And Type The Reason')
+                .col-2
+                    +ratio
+            textarea(class="message col-12 text-capitalize" type="text" placeholder="close message content")
+        include includes/section.pug
+            +section('General Info','General Information About Your Account')
+            .d-flex.row.general-info
+                label First Name
+                input(placeholder="First Name")
+            .d-flex.row.general-info
+                label Last Name
+                input(placeholder="Last Name")
+            .d-flex.row.general-info
+                label Email
+                div 
+                    input(class="email" placeholder="o@nn.sa")
+                    a(href="settings.html") Change
+        include includes/section.pug
+            +section('Security Info','Security Information About Your Account')
+            .col-12.row.nowrap.security.d-flex.justify-content-between
+                .col-8.phrase
+                    +section('password','Last Change On 25/10/2021')
+                .col-2
+                    button.btn.btn-primary change
+            .col-12.row.nowrap.security.d-flex.justify-content-between
+                .col-8.phrase
+                    +section('Two-Factor Authentication','Enable/Disable The Feature')
+                .col-2
+                    +ratio
+            .col-12.row.nowrap.security.d-flex.justify-content-between
+                .col-8.phrase
+                    +section('Devices','Check The Login Devices List')
+                .col-2
+                    label.device.text-capitalize devices 
+        include includes/section.pug
+            +section('Social Info','Social Media Information')
+            .d-flex.row.wrap.align-items-center
+                .col-12.social-info
+                    i(class="i fa-brands fa-twitter")
+                    input(type="text" placeholder="Twitter Username")
+                .col-12.social-info
+                    i(class="i fa-brands fa-facebook-f")
+                    input(type="text" placeholder="Facebook Username")
+                .col-12.social-info
+                    i(class="i fa-brands fa-linkedin")
+                    input(type="text" placeholder="Linkedin Username")
+                .col-12.social-info
+                    i(class="i fa-brands fa-youtube")
+                    input(type="text" placeholder="Youtube Username")
+        include includes/section.pug
+            +section('Widgets Control','Show/Hide Widgets')
+            .col-12.d-flex.align-items-center.widgets
+                input(id="one" class="Check" type="checkbox" checked)
+                label(for="one")  Quick Draft
+            .col-12.d-flex.align-items-center.widgets
+                input(id="two" class="Check" type="checkbox" checked)
+                label(for="two")  Yearly Targets
+            .col-12.d-flex.align-items-center.widgets
+                input(id="three" class="Check" type="checkbox" checked)
+                label(for="three")  Tickets Statistics
+            .col-12.d-flex.align-items-center.widgets
+                input(id="four" class="Check" type="checkbox" checked)
+                label(for="four")  Latest News
+            .col-12.d-flex.align-items-center.widgets
+                input(id="five" class="Check" type="checkbox")
+                label(for="five")  Latest Tasks
+            .col-12.d-flex.align-items-center.widgets
+                input(id="six" class="Check" type="checkbox" checked)
+                label(for="six")  Top Search Items
+        include includes/section.pug
+            +section('Backup Manager','Control Backup Time And Location')
+            div(id="backup-ratio" class="col-12 d-flex row wrap")
+                .col-12.d-flex.align-items-center.backup
+                    input(id="daily" type="radio" name="ratio" checked)
+                    label(for="daily")  Daily
+                .col-12.d-flex.align-items-center.backup
+                    input(id="weekly" type="radio" name="ratio")
+                    label(for="weekly")  weekly
+                .col-12.d-flex.align-items-center.backup
+                    input(id="monthly" type="radio" name="ratio")
+                    label(for="monthly")  Monthly
+            div(id="backup-btn" class="b-top col-12 d-flex align-items-center row wrap")
+                button.col-lg-3.col-md-3.col-sm-12.backup-btn.d-flex.row.wrap
+                    i.fa-solid.fa-server
+                    span Megaman
+                button.col-lg-3.col-md-3.col-sm-12.backup-btn.d-flex.row.wrap
+                    i.fa-solid.fa-server
+                    span Zero
+                button.col-lg-3.col-md-3.col-sm-12.backup-btn.d-flex.row.wrap
+                    i.fa-solid.fa-server
+                    span Sigma
