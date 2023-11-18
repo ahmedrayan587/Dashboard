@@ -116,6 +116,10 @@ a:hover{
     padding: 10px!important;
     
 }
+header{
+    background: white;
+    padding: 10px;
+}
 .head-input{
     position: relative;
     height: 40px;
